@@ -1,0 +1,29 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "the first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikki-li/frontend-project-44.git"
+  },
+  "keywords": [
+    "project-44"
+  ],
+  "bin": {
+	  "brain-games": "bin/brain-games.js"
+  },
+  "author": "Yakshina Alexandra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikki-li/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/ikki-li/frontend-project-44#readme",
+  "dependencies": {
+    "makefile": "^0.0.2"
+  }
+}
