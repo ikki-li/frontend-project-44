@@ -1,4 +1,5 @@
-import { getInteractive } from '../index.js';
+import { cons } from '@hexlet/pairs';
+import { getInteractive } from '../index-without-arrays.js';
 
 const gcd = (x, y) => {
   if (y > x) {
@@ -10,20 +11,20 @@ const gcd = (x, y) => {
   return gcd(y, x % y);
 };
 
+const getOneRound = () => {
+  let expression = '';
+  let rightAnswer = '';
+
+  const randomNmb1 = Math.floor(Math.random() * 99 + 2);
+  const randomNmb2 = Math.floor(Math.random() * 99 + 2);
+
+  expression = `${randomNmb1} ${randomNmb2}`;
+  rightAnswer = String(gcd(randomNmb1, randomNmb2));
+  return cons(expression, rightAnswer);
+};
+
 // eslint-disable-next-line import/prefer-default-export
 export const getGCD = () => {
   const rulesOfGame = 'Find the greatest common divisor of given numbers.';
-  const expressions = [];
-  const rightAnswers = [];
-
-  for (let i = 1; i < 4; i += 1) {
-    const randomNmb1 = Math.floor(Math.random() * 99 + 2);
-    const randomNmb2 = Math.floor(Math.random() * 99 + 2);
-
-    expressions.push(`${randomNmb1} ${randomNmb2}`);
-
-    const rightAnswer = gcd(randomNmb1, randomNmb2);
-    rightAnswers.push(String(rightAnswer));
-  }
-  getInteractive(rulesOfGame, expressions, rightAnswers);
+  getInteractive(rulesOfGame, getOneRound);
 };

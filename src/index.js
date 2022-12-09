@@ -1,18 +1,20 @@
 import readlineSync from 'readline-sync';
+import { car as expression, cdr as rightAnswer } from '@hexlet/pairs';
 
 // eslint-disable-next-line import/prefer-default-export
-export const getInteractive = (rulesOfGame, expressions, rightAnswers) => {
+export const getInteractive = (rulesOfGame, pairs) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(rulesOfGame);
 
-  for (let i = 0; i < expressions.length; i += 1) {
-    const answer = readlineSync.question(`Question: ${expressions[i]} `);
-    if (answer === rightAnswers[i]) {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const pair of pairs) {
+    const answer = readlineSync.question(`Question: ${expression(pair)} `);
+    if (answer === rightAnswer(pair)) {
       console.log('Correct!');
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${rightAnswers[i]}".
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${rightAnswer(pair)}".
 Let's try again, ${userName}!`);
       return 'error';
     }
