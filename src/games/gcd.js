@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import { getInteractive } from '../index-without-arrays.js';
+import { getInteractive } from '../index.js';
 
 const gcd = (x, y) => {
   if (y > x) {
@@ -12,14 +12,11 @@ const gcd = (x, y) => {
 };
 
 const getOneRound = () => {
-  let expression = '';
-  let rightAnswer = '';
-
   const randomNmb1 = Math.floor(Math.random() * 99 + 2);
   const randomNmb2 = Math.floor(Math.random() * 99 + 2);
 
-  expression = `${randomNmb1} ${randomNmb2}`;
-  rightAnswer = String(gcd(randomNmb1, randomNmb2));
+  const expression = `${randomNmb1} ${randomNmb2}`;
+  const rightAnswer = String(gcd(randomNmb1, randomNmb2));
   return cons(expression, rightAnswer);
 };
 
