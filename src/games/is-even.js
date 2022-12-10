@@ -1,19 +1,19 @@
+import { cons } from '@hexlet/pairs';
 import { getInteractive } from '../index.js';
 
-// eslint-disable-next-line import/prefer-default-export
-export const numberIsEven = () => {
-  const rulesOfGame = 'Answer "yes" if the number is even, otherwise answer "no"';
-  const expressions = [];
-  const rightAnswers = [];
-  for (let i = 1; i < 4; i += 1) {
-    const randomNumber = Math.ceil(Math.random() * 10);
-    expressions.push(String(randomNumber));
+const getOneRound = () => {
+  const expression = Math.floor(Math.random() * 99 + 1);
 
-    if (randomNumber % 2 === 0) {
-      rightAnswers.push('yes');
-    } else {
-      rightAnswers.push('no');
-    }
+  let rightAnswer = '';
+  if (expression % 2 === 0) {
+    rightAnswer = 'yes';
+  } else {
+    rightAnswer = 'no';
   }
-  getInteractive(rulesOfGame, expressions, rightAnswers);
+  return cons(expression, rightAnswer);
+};
+// eslint-disable-next-line import/prefer-default-export
+export const isEven = () => {
+  const rulesOfGame = 'Answer "yes" if the number is even, otherwise answer "no"';
+  getInteractive(rulesOfGame, getOneRound);
 };
