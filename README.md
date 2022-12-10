@@ -12,3 +12,9 @@
 
 ###Brain-gcd game on Asciinema:
 [Asciicast 544046](https://asciinema.org/a/544046)
+
+###Brain-progression game on Asciinema:
+[Asciicast 544542](https://asciinema.org/a/544542)
+
+###Brain-prime game on Asciinema:
+[Asciicast 544544](https://asciinema.org/a/544544)
