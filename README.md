@@ -28,16 +28,16 @@ npm link
 ### Brain-games on Asciinema:
 
 **Brain-even**
-[![Asciicast 543372](https://asciinema.org/a/543372)
+[![Asciicast 543372]((https://asciinema.org/a/543372.svg)](https://asciinema.org/a/543372)
 
 **Brain-calc**
-[![Asciicast 544018](https://asciinema.org/a/544018)
+[![Asciicast 544018](https://asciinema.org/a/544018.svg)](https://asciinema.org/a/544018)
 
 **Brain-gcd**
-[![Asciicast 544046](https://asciinema.org/a/544046)
+[![Asciicast 544046](https://asciinema.org/a/544046.svg)](https://asciinema.org/a/544046)
 
 **Brain-progression**
-[![Asciicast 544542](https://asciinema.org/a/544542)
+[![Asciicast 544542](https://asciinema.org/a/544542.svg)](https://asciinema.org/a/544542.svg)
 
 **Brain-prime**
-[![Asciicast 544544](https://asciinema.org/a/544544)
+[![Asciicast 544544]((https://asciinema.org/a/544544.svg)](https://asciinema.org/a/544544)
