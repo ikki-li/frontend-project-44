@@ -4,7 +4,7 @@
 [![Actions Status](https://github.com/ikki-li/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/ikki-li/frontend-project-44/actions)
 
 ### Description:
-Application contains five simple arithmetic games to play in the linux terminal. It includes:
+Application contains five simple arithmetic games to play in the linux terminal.
 
 ### Requirements:
 Node.js ^13.2.0
