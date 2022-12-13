@@ -30,7 +30,6 @@
   "homepage": "https://github.com/ikki-li/frontend-project-44#readme",
   "dependencies": {
     "@hexlet/pairs": "^1.1.1",
-    "makefile": "^0.0.2",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
