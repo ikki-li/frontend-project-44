@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { getAP } from '../src/games/progression.js';
+import runProgression from '../src/games/progression.js';
 
-getAP();
+runProgression();
