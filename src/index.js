@@ -1,15 +1,14 @@
 import readlineSync from 'readline-sync';
 import { car as expression, cdr as rightAnswer } from '@hexlet/pairs';
 
-// eslint-disable-next-line import/prefer-default-export
-export const getInteractive = (rulesOfGame, getOneRound) => {
+const run = (rulesOfGame, getQA) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(rulesOfGame);
 
   for (let i = 1; i < 4; i += 1) {
-    const pair = getOneRound();
+    const pair = getQA();
     const answer = readlineSync.question(`Question: ${expression(pair)} `);
     if (answer === rightAnswer(pair)) {
       console.log('Correct!');
@@ -21,3 +20,5 @@ export const getInteractive = (rulesOfGame, getOneRound) => {
   console.log(`Congratulations, ${userName}!`);
   return 'passed';
 };
+
+export default run;
