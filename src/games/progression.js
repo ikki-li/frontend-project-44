@@ -1,28 +1,38 @@
 import { cons } from '@hexlet/pairs';
-import { getInteractive } from '../index.js';
+import run from '../index.js';
+import { getRandIndex, getRandNmb } from '../utils.js';
 
-const getOneRound = () => {
-  const randomLength = Math.floor(Math.random() * 6 + 5);
-  const coll = [];
-  let termOfAP = Math.floor(Math.random() * 20 + 1);
-  const randomStep = Math.floor(Math.random() * 9 + 2);
-  for (let i = 0; i < randomLength; i += 1) {
-    coll[i] = termOfAP;
-    termOfAP += randomStep;
+const getAP = (lengthOfAP, firstTerm, step) => {
+  const AP = [];
+
+  let term = firstTerm;
+  for (let i = 0; i < lengthOfAP; i += 1) {
+    AP[i] = term;
+    term += step;
   }
+  return AP;
+};
 
-  const randomIndex = Math.floor(Math.random() * coll.length);
-  const rightAnswer = String(coll[randomIndex]);
-  coll[randomIndex] = '..';
+const getQA = () => {
+  const lengthOfAP = getRandNmb(5, 10);
+  const firstTerm = getRandNmb(1, 20);
+  const step = getRandNmb(2, 10);
+
+  const AP = getAP(lengthOfAP, firstTerm, step);
+
+  const randIndex = getRandIndex(AP);
+  const rightAnswer = String(AP[randIndex]);
+  AP[randIndex] = '..';
 
   const separator = ' ';
-  const expression = coll.join(separator);
+  const expression = AP.join(separator);
 
   return cons(expression, rightAnswer);
 };
 
-// eslint-disable-next-line import/prefer-default-export
-export const getAP = () => {
+const runProgression = () => {
   const rulesOfGame = 'What number is missing in the progression?';
-  getInteractive(rulesOfGame, getOneRound);
+  run(rulesOfGame, getQA);
 };
+
+export default runProgression;

@@ -1,27 +1,29 @@
 import { cons } from '@hexlet/pairs';
-import { getInteractive } from '../index.js';
+import run from '../index.js';
+import { getRandNmb } from '../utils.js';
 
-const gcd = (x, y) => {
+const getGCD = (x, y) => {
   if (y > x) {
-    return gcd(y, x);
+    return getGCD(y, x);
   }
   if (!y) {
     return x;
   }
-  return gcd(y, x % y);
+  return getGCD(y, x % y);
 };
 
-const getOneRound = () => {
-  const randomNmb1 = Math.floor(Math.random() * 99 + 2);
-  const randomNmb2 = Math.floor(Math.random() * 99 + 2);
+const getQA = () => {
+  const dividend1 = getRandNmb(2, 100);
+  const dividend2 = getRandNmb(2, 100);
 
-  const expression = `${randomNmb1} ${randomNmb2}`;
-  const rightAnswer = String(gcd(randomNmb1, randomNmb2));
+  const expression = `${dividend1} ${dividend2}`;
+  const rightAnswer = String(getGCD(dividend1, dividend2));
   return cons(expression, rightAnswer);
 };
 
-// eslint-disable-next-line import/prefer-default-export
-export const getGCD = () => {
+const runGCD = () => {
   const rulesOfGame = 'Find the greatest common divisor of given numbers.';
-  getInteractive(rulesOfGame, getOneRound);
+  run(rulesOfGame, getQA);
 };
+
+export default runGCD;
