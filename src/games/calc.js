@@ -1,6 +1,9 @@
 import { cons } from '@hexlet/pairs';
 import run from '../index.js';
-import { getRandIndex, getRandNmb } from '../utils.js';
+import { getRandomIndex, getRandomNumber } from '../utils.js';
+
+const operators = ['+', '*'];
+const description = 'What is the result of the expression?';
 
 const getValue = (x, y, operator) => {
   switch (operator) {
@@ -13,23 +16,22 @@ const getValue = (x, y, operator) => {
   }
 };
 
-const getQA = () => {
-  const operators = ['+', '*'];
-  const randIndex = getRandIndex(operators);
-  const operator = operators[randIndex];
-  const operand1 = getRandNmb(1, 99);
-  const operand2 = getRandNmb(1, 9);
+const generateRound = () => {
+  const randomIndex = getRandomIndex(operators);
+  const operator = operators[randomIndex];
+  const operand1 = getRandomNumber(1, 99);
+  const operand2 = getRandomNumber(1, 9);
 
-  const expression = `${operand1} ${operator} ${operand2}`;
+  const question = `${operand1} ${operator} ${operand2}`;
 
-  const rightAnswer = String(getValue(operand1, operand2, operator));
+  const value = getValue(operand1, operand2, operator);
+  const rightAnswer = String(value);
 
-  return cons(expression, rightAnswer);
+  return cons(question, rightAnswer);
 };
 
 const runCalc = () => {
-  const rulesOfGame = 'What is the result of the expression?';
-  run(rulesOfGame, getQA);
+  run(description, generateRound);
 };
 
 export default runCalc;

@@ -1,6 +1,8 @@
 import { cons } from '@hexlet/pairs';
 import run from '../index.js';
-import { getRandNmb } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
+
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (n, divider = 2) => {
   if (n % divider === 0) {
@@ -12,16 +14,15 @@ const isPrime = (n, divider = 2) => {
   return isPrime(n, divider + 1);
 };
 
-const getQA = () => {
-  const randNmb = getRandNmb(3, 100);
-  const expression = String(randNmb);
-  const rightAnswer = isPrime(randNmb) ? 'yes' : 'no';
-  return cons(expression, rightAnswer);
+const generateRound = () => {
+  const randomNumber = getRandomNumber(3, 100);
+  const question = String(randomNumber);
+  const rightAnswer = isPrime(randomNumber) ? 'yes' : 'no';
+  return cons(question, rightAnswer);
 };
 
 const runPrime = () => {
-  const rulesOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  run(rulesOfGame, getQA);
+  run(description, generateRound);
 };
 
 export default runPrime;

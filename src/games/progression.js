@@ -1,38 +1,38 @@
 import { cons } from '@hexlet/pairs';
 import run from '../index.js';
-import { getRandIndex, getRandNmb } from '../utils.js';
+import { getRandomIndex, getRandomNumber } from '../utils.js';
 
-const getAP = (lengthOfAP, firstTerm, step) => {
-  const AP = [];
+const description = 'What number is missing in the progression?';
 
+const createProgression = (progressionLength, firstTerm, step) => {
+  const progression = [];
   let term = firstTerm;
-  for (let i = 0; i < lengthOfAP; i += 1) {
-    AP[i] = term;
+  for (let i = 0; i < progressionLength; i += 1) {
+    progression[i] = term;
     term += step;
   }
-  return AP;
+  return progression;
 };
 
-const getQA = () => {
-  const lengthOfAP = getRandNmb(5, 10);
-  const firstTerm = getRandNmb(1, 20);
-  const step = getRandNmb(2, 10);
+const generateRound = () => {
+  const progressionLength = getRandomNumber(5, 10);
+  const firstTerm = getRandomNumber(1, 20);
+  const step = getRandomNumber(2, 10);
 
-  const AP = getAP(lengthOfAP, firstTerm, step);
+  const progression = createProgression(progressionLength, firstTerm, step);
 
-  const randIndex = getRandIndex(AP);
-  const rightAnswer = String(AP[randIndex]);
-  AP[randIndex] = '..';
+  const randomIndex = getRandomIndex(progression);
+  const rightAnswer = String(progression[randomIndex]);
+  progression[randomIndex] = '..';
 
   const separator = ' ';
-  const expression = AP.join(separator);
+  const question = progression.join(separator);
 
-  return cons(expression, rightAnswer);
+  return cons(question, rightAnswer);
 };
 
 const runProgression = () => {
-  const rulesOfGame = 'What number is missing in the progression?';
-  run(rulesOfGame, getQA);
+  run(description, generateRound);
 };
 
 export default runProgression;
