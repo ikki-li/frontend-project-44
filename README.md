@@ -25,20 +25,20 @@ npm link
 
 #### Brain-even
 
-[![Asciicast 543372](https://asciinema.org/a/546127.svg)](https://asciinema.org/a/546127)
+[![Asciicast 546127](https://asciinema.org/a/546127.svg)](https://asciinema.org/a/546127)
 
 #### Brain-calc
 
-[![Asciicast 544018](https://asciinema.org/a/546128.svg)](https://asciinema.org/a/546128)
+[![Asciicast 546128](https://asciinema.org/a/546128.svg)](https://asciinema.org/a/546128)
 
 #### Brain-gcd
 
-[![Asciicast 544046](https://asciinema.org/a/546165.svg)](https://asciinema.org/a/546165)
+[![Asciicast 546168](https://asciinema.org/a/546168.svg)](https://asciinema.org/a/546168)
 
 #### Brain-progression
 
-[![Asciicast 544542](https://asciinema.org/a/546130.svg)](https://asciinema.org/a/546130)
+[![Asciicast 546130](https://asciinema.org/a/546130.svg)](https://asciinema.org/a/546130)
 
 #### Brain-prime
 
-[![Asciicast 544544](https://asciinema.org/a/546131.svg)](https://asciinema.org/a/546131)
+[![Asciicast 546131](https://asciinema.org/a/546131.svg)](https://asciinema.org/a/546131)
