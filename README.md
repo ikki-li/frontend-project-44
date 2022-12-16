@@ -4,6 +4,7 @@
 [![Actions Status](https://github.com/ikki-li/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/ikki-li/frontend-project-44/actions)
 
 ### Description:
+
 Application contains five simple arithmetic games to play in the linux terminal.
 
 ### Requirements:
@@ -23,4 +24,22 @@ npm link
 
 ### Brain-games on Asciinema:
 
-[![Asciicast 543372](https://asciinema.org/a/545362.svg)](https://asciinema.org/a/545362)
+#### Brain-even
+
+[![Asciicast 543372](https://asciinema.org/a/546127.svg)](https://asciinema.org/a/546127)
+
+#### Brain-calc
+
+[![Asciicast 544018](https://asciinema.org/a/546128.svg)](https://asciinema.org/a/546128)
+
+#### Brain-divisor
+
+[![Asciicast 544046](https://asciinema.org/a/546129.svg)](https://asciinema.org/a/546129)
+
+#### Brain-progression
+
+[![Asciicast 544542](https://asciinema.org/a/546130.svg)](https://asciinema.org/a/546130)
+
+####Brain-prime
+
+[![Asciicast 544544](https://asciinema.org/a/546131.svg)](https://asciinema.org/a/546131)
