@@ -31,9 +31,9 @@ npm link
 
 [![Asciicast 544018](https://asciinema.org/a/546128.svg)](https://asciinema.org/a/546128)
 
-#### Brain-divisor
+#### Brain-gcd
 
-[![Asciicast 544046](https://asciinema.org/a/546129.svg)](https://asciinema.org/a/546129)
+[![Asciicast 544046](https://asciinema.org/a/546165.svg)](https://asciinema.org/a/546165)
 
 #### Brain-progression
 
