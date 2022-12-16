@@ -24,8 +24,7 @@ const generateRound = () => {
 
   const question = `${operand1} ${operator} ${operand2}`;
 
-  const value = getValue(operand1, operand2, operator);
-  const rightAnswer = String(value);
+  const rightAnswer = String(getValue(operand1, operand2, operator));
 
   return cons(question, rightAnswer);
 };
