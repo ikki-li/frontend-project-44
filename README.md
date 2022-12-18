@@ -29,7 +29,7 @@ npm link
 
 #### Brain-calc
 
-[![Asciicast 546128](https://asciinema.org/a/546128.svg)](https://asciinema.org/a/546128)
+[![Asciicast 546549](https://asciinema.org/a/546549.svg)](https://asciinema.org/a/546549)
 
 #### Brain-gcd
 
@@ -37,7 +37,7 @@ npm link
 
 #### Brain-progression
 
-[![Asciicast 546130](https://asciinema.org/a/546130.svg)](https://asciinema.org/a/546130)
+[![Asciicast 546550](https://asciinema.org/a/546550.svg)](https://asciinema.org/a/546550)
 
 #### Brain-prime
 
