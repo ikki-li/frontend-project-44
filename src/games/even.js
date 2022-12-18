@@ -4,10 +4,14 @@ import { getRandomNumber } from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no"';
 
+// избавилась от магических чисел
+const minNumber = 1;
+const maxNumber = 99;
+
 const isEven = (x) => (x % 2 === 0);
 
 const generateRound = () => {
-  const question = getRandomNumber(1, 99);
+  const question = getRandomNumber(minNumber, maxNumber);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
 
   return cons(question, rightAnswer);

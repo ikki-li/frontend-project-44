@@ -4,6 +4,10 @@ import { getRandomNumber } from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
+// избавилась от магических чисел
+const minNumber = 3;
+const maxNumber = 100;
+
 const isPrime = (n, divider = 2) => {
   if (n % divider === 0) {
     return false;
@@ -15,7 +19,7 @@ const isPrime = (n, divider = 2) => {
 };
 
 const generateRound = () => {
-  const randomNumber = getRandomNumber(3, 100);
+  const randomNumber = getRandomNumber(minNumber, maxNumber);
   const question = String(randomNumber);
   const rightAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   return cons(question, rightAnswer);

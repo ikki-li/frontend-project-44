@@ -3,6 +3,8 @@ import run from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
+const minNumber = 2;
+const maxNumber = 100;
 
 const getGcd = (x, y) => {
   if (y > x) {
@@ -15,8 +17,8 @@ const getGcd = (x, y) => {
 };
 
 const generateRound = () => {
-  const dividend1 = getRandomNumber(2, 100);
-  const dividend2 = getRandomNumber(2, 100);
+  const dividend1 = getRandomNumber(minNumber, maxNumber);
+  const dividend2 = getRandomNumber(minNumber, maxNumber);
 
   const question = `${dividend1} ${dividend2}`;
   const rightAnswer = String(getGcd(dividend1, dividend2));

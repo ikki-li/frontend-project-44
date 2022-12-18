@@ -4,6 +4,8 @@ import { getRandomIndex, getRandomNumber } from '../utils.js';
 
 const operators = ['+', '*'];
 const description = 'What is the result of the expression?';
+const minNumber = 1;
+const maxNumber = 99;
 
 const getValue = (x, y, operator) => {
   switch (operator) {
@@ -19,8 +21,8 @@ const getValue = (x, y, operator) => {
 const generateRound = () => {
   const randomIndex = getRandomIndex(operators);
   const operator = operators[randomIndex];
-  const operand1 = getRandomNumber(1, 99);
-  const operand2 = getRandomNumber(1, 9);
+  const operand1 = getRandomNumber(minNumber, maxNumber);
+  const operand2 = getRandomNumber(minNumber, maxNumber);
 
   const question = `${operand1} ${operator} ${operand2}`;
 

@@ -4,6 +4,12 @@ import { getRandomIndex, getRandomNumber } from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
+// избавилась от магических чисел
+const minLength = 5;
+const maxLength = 10;
+const minNumber = 1;
+const maxNumber = 10;
+
 const createProgression = (progressionLength, firstTerm, step) => {
   const progression = [];
   let term = firstTerm;
@@ -15,9 +21,9 @@ const createProgression = (progressionLength, firstTerm, step) => {
 };
 
 const generateRound = () => {
-  const progressionLength = getRandomNumber(5, 10);
-  const firstTerm = getRandomNumber(1, 20);
-  const step = getRandomNumber(2, 10);
+  const progressionLength = getRandomNumber(minLength, maxLength);
+  const firstTerm = getRandomNumber(minNumber, maxNumber);
+  const step = getRandomNumber(minNumber, maxNumber);
 
   const progression = createProgression(progressionLength, firstTerm, step);
 
