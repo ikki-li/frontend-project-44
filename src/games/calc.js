@@ -21,8 +21,7 @@ const calculate = (x, y, operator) => {
 };
 
 const generateRound = () => {
-  const index = getRandomIndex(operators);
-  const operator = operators[index];
+  const operator = operators[getRandomIndex(operators)];
   const operand1 = getRandomNumber(minOperand, maxOperand);
   const operand2 = getRandomNumber(minOperand, maxOperand);
   const question = `${operand1} ${operator} ${operand2}`;
