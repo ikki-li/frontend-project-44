@@ -1,28 +1,19 @@
-import { cons } from '@hexlet/pairs';
+import { cons as generatePair } from '@hexlet/pairs';
 import run from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
-const minNumber = 2;
-const maxNumber = 100;
+const minDividend = 2;
+const maxDividend = 100;
 
-const getGcd = (x, y) => {
-  if (y > x) {
-    return getGcd(y, x);
-  }
-  if (!y) {
-    return x;
-  }
-  return getGcd(y, x % y);
-};
+const getGcd = (x, y) => (y === 0 ? x : getGcd(y, x % y));
 
 const generateRound = () => {
-  const dividend1 = getRandomNumber(minNumber, maxNumber);
-  const dividend2 = getRandomNumber(minNumber, maxNumber);
-
+  const dividend1 = getRandomNumber(minDividend, maxDividend);
+  const dividend2 = getRandomNumber(minDividend, maxDividend);
   const question = `${dividend1} ${dividend2}`;
   const rightAnswer = String(getGcd(dividend1, dividend2));
-  return cons(question, rightAnswer);
+  return generatePair(question, rightAnswer);
 };
 
 const runGcd = () => {
