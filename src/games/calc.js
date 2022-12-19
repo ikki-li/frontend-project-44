@@ -1,34 +1,33 @@
-import { cons } from '@hexlet/pairs';
+import { cons as generatePair } from '@hexlet/pairs';
 import run from '../index.js';
 import { getRandomIndex, getRandomNumber } from '../utils.js';
 
-const operators = ['+', '*'];
+const operators = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
-const minNumber = 1;
-const maxNumber = 99;
+const minOperand = 1;
+const maxOperand = 99;
 
-const getValue = (x, y, operator) => {
+const calculate = (x, y, operator) => {
   switch (operator) {
     case '+':
       return x + y;
+    case '-':
+      return x - y;
     case '*':
       return x * y;
     default:
-      return null;
+      throw new Error(`Unknown operator '${operator}'!`);
   }
 };
 
 const generateRound = () => {
-  const randomIndex = getRandomIndex(operators);
-  const operator = operators[randomIndex];
-  const operand1 = getRandomNumber(minNumber, maxNumber);
-  const operand2 = getRandomNumber(minNumber, maxNumber);
-
+  const index = getRandomIndex(operators);
+  const operator = operators[index];
+  const operand1 = getRandomNumber(minOperand, maxOperand);
+  const operand2 = getRandomNumber(minOperand, maxOperand);
   const question = `${operand1} ${operator} ${operand2}`;
-
-  const rightAnswer = String(getValue(operand1, operand2, operator));
-
-  return cons(question, rightAnswer);
+  const rightAnswer = String(calculate(operand1, operand2, operator));
+  return generatePair(question, rightAnswer);
 };
 
 const runCalc = () => {
