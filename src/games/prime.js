@@ -1,10 +1,8 @@
-import { cons } from '@hexlet/pairs';
+import { cons as generatePair } from '@hexlet/pairs';
 import run from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-// избавилась от магических чисел
 const minNumber = 3;
 const maxNumber = 100;
 
@@ -19,10 +17,10 @@ const isPrime = (n, divider = 2) => {
 };
 
 const generateRound = () => {
-  const randomNumber = getRandomNumber(minNumber, maxNumber);
-  const question = String(randomNumber);
-  const rightAnswer = isPrime(randomNumber) ? 'yes' : 'no';
-  return cons(question, rightAnswer);
+  const number = getRandomNumber(minNumber, maxNumber);
+  const question = String(number);
+  const rightAnswer = isPrime(number) ? 'yes' : 'no';
+  return generatePair(question, rightAnswer);
 };
 
 const runPrime = () => {
