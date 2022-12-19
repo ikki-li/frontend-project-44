@@ -29,7 +29,7 @@ npm link
 
 #### Brain-calc
 
-[![Asciicast 546684](https://asciinema.org/a/546684.svg)](https://asciinema.org/a/546684)
+[![Asciicast 546686](https://asciinema.org/a/546686.svg)](https://asciinema.org/a/546686)
 
 #### Brain-gcd
 
